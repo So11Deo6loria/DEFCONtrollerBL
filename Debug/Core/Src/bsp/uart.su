@@ -1,0 +1,9 @@
+../Drivers/CMSIS/Include/core_cm4.h:1816:22:__NVIC_SetPriority	16	static
+../Core/Src/bsp/uart.c:20:6:UART_Init	40	static
+../Core/Src/bsp/uart.c:75:6:UART_SendByte	24	static
+../Core/Src/bsp/uart.c:93:9:UART_ReceiveByte	16	static
+../Core/Src/bsp/uart.c:105:6:UART_SendData	32	static
+../Core/Src/bsp/uart.c:113:6:UART_ReceiveData	32	static
+../Core/Src/bsp/uart.c:121:6:BspSystemTimeInit	8	static
+../Core/Src/bsp/uart.c:130:10:BspSystemTimeGetTime	8	static
+../Core/Src/bsp/uart.c:135:9:BspSystemTimeHasExpired	16	static

@@ -4,7 +4,7 @@
 ../Core/Src/xmodem.c:115:16:XModem1KCreate	32	static
 ../Core/Src/xmodem.c:148:6:XModem1KReceiveFileInit	24	static
 ../Core/Src/xmodem.c:160:9:XModem1KReceiveFile	24	static
-../Core/Src/xmodem.c:343:9:XModem1KSendFileInit	24	static
-../Core/Src/xmodem.c:359:9:XModem1KSendPacket	40	static
-../Core/Src/xmodem.c:411:6:XModem1KSendEndTransfer	24	static
-../Core/Src/xmodem.c:417:11:XModem1KGetSendBuffer	24	static
+../Core/Src/xmodem.c:310:9:XModem1KSendFileInit	24	static
+../Core/Src/xmodem.c:321:9:XModem1KSendPacket	40	static
+../Core/Src/xmodem.c:373:6:XModem1KSendEndTransfer	24	static
+../Core/Src/xmodem.c:379:11:XModem1KGetSendBuffer	24	static

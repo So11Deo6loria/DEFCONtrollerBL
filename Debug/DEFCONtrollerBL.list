@@ -1,5 +1,5 @@
 
-DEFCONtrollerBootloader.elf:     file format elf32-littlearm
+DEFCONtrollerBL.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  000259ad  00000000  00000000  000447f0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0001ad79  00000000  00000000  0006a19d  2**0
+ 18 .debug_line   0001ad77  00000000  00000000  0006a19d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000e7284  00000000  00000000  00084f16  2**0
+ 19 .debug_str    000e727c  00000000  00000000  00084f14  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000050  00000000  00000000  0016c19a  2**0
+ 20 .comment      00000050  00000000  00000000  0016c190  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00006a38  00000000  00000000  0016c1ec  2**2
+ 21 .debug_frame  00006a38  00000000  00000000  0016c1e0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -2510,11 +2510,8 @@ uint8_t XModem1KReceiveFile( XModem1KHandle          handle,
 
   while( xmodem1k_handle->in_progress )
  80010b8:	e129      	b.n	800130e <XModem1KReceiveFile+0x286>
-//	        xmodem1k_handle->write( POLL );
-//	        xmodem1k_handle->timer_start( POLL_PERIOD_ms );
-//	      }
-//	    }
-//	}
+  {
+    /* Check if a character has been received on the UART */
 	if( xmodem1k_handle->read( &xmodem1k_handle->data ) )
  80010ba:	68bb      	ldr	r3, [r7, #8]
  80010bc:	689b      	ldr	r3, [r3, #8]
